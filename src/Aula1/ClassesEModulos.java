@@ -1,4 +1,4 @@
-//quando um atributo possui o static, significa que ele é da classe, p chamar como main
+package Aula1;//quando um atributo possui o static, significa que ele é da classe, p chamar como main
 //basta o nome da classe e um ponto, ex: Funcionario. (só q o Static não muda!)
 
 import Aula1.Carro;
