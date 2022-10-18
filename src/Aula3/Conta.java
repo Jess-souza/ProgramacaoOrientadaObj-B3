@@ -47,7 +47,7 @@ public class Conta {
 
     @Override
     public String toString() {
-        return "Conta{" +
+        return "Conta " +
                 "titular='" + titular + '\'' +
                 ", numeroConta='" + numeroConta + '\'' +
                 ", cpf='" + cpf + '\'' +
