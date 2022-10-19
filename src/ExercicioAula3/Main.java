@@ -9,16 +9,12 @@ public class Main {
         System.out.println(pilotoFranklin);
 
         CarroCorrida carroCorridaJessica = new CarroCorrida(2, pilotoJessica, 100, 50, false);
-         carroCorridaJessica.ligar();
+
+        carroCorridaJessica.ligar();
         carroCorridaJessica.acelerar();
-
-
-        //carroCorridaJessica.desligar();
         carroCorridaJessica.frear();
-
-
         carroCorridaJessica.parar();
-
+        carroCorridaJessica.desligar();
 
         System.out.println(carroCorridaJessica);
     }

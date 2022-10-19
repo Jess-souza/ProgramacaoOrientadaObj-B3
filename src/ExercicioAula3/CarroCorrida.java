@@ -121,16 +121,18 @@ public class CarroCorrida {
     }
 
     public boolean ligar() {
-        if (getLigado(false)){
-          boolean ligado = true;
+        if (getLigado(false)) {
+            boolean ligado = true;
             setLigado(ligado);
         }
         return false;
     }
 
     public void desligar() {
-        if (parar() == true) {
-            ligado = false;
+        if (getVelocidadeAtual() == 0f) {
+            setLigado(false);
+        } else {
+            System.out.println("Não é possível desligar um veículo em movimento!");
         }
     }
 
@@ -144,13 +146,4 @@ public class CarroCorrida {
                 ", ligado=" + ligado +
                 '}';
     }
-
-    /*
-+ frear(float) - reduz a velocidade em percentual (%) de frenagem
-+ parar()
-+ ligar()
-+ desligar()
-*Observações:
-*Não ultrapassar a velocidade máxima
-*Desligar só funciona se o carro estiver parado*/
 }
