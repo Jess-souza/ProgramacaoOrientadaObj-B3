@@ -73,7 +73,7 @@ public class CarroCorrida {
         this.velocidadeAtual = velocidadeAtual;
     }
 
-    public boolean getLigado() {
+    public boolean getLigado(boolean b) {
         return ligado;
     }
 
@@ -82,30 +82,50 @@ public class CarroCorrida {
     }
 
     public float acelerar() {
-        //if (ligado = true) {
-        return getVelocidadeAtual() + 30.8f;
-
-        // } else {
-        // System.out.println("Não é possível acelerar um carro desligado!");
-        //}
-        //return 0;
+        if (ligado == false) {
+            System.out.println("Não é possível acelerar um carro desligado!");
+        } else if (getVelocidadeAtual() < getVelocidadeMaxima()) {
+            float novaVelocidade = getVelocidadeAtual() + 10f;
+            setVelocidadeAtual(novaVelocidade);
+            if (getVelocidadeAtual() >= getVelocidadeMaxima()) {
+                System.out.println("A velocidade máxima foi atingida");
+                setVelocidadeAtual(getVelocidadeMaxima());
+            }
+        }
+        return 0;
     }
 
     public float frear() {
-        //   if (ligado = true) {
-        return getVelocidadeAtual() - 5.32f;
+        if (ligado == false) {
+            System.out.println("Não é possível reduzir velocidade de um carro desligado!");
+        } else if (getVelocidadeAtual() >= 0) {
+            float novaVelocidade = getVelocidadeAtual() - 30f;
+            setVelocidadeAtual(novaVelocidade);
+
+            if (getVelocidadeAtual() < 0) {
+                System.out.println("O veiculo já está parado");
+                setVelocidadeAtual(0);
+            }
+        }
+        return 0;
     }
 
 
     public boolean parar() {
-        if (ligado = true) {
+        if (ligado == true) {
             setVelocidadeAtual(0f);
+        } else {
+            System.out.println("Não é possível parar um carro desligado!");
         }
         return false;
     }
 
-    public void ligar() {
-        ligado = true;
+    public boolean ligar() {
+        if (getLigado(false)){
+          boolean ligado = true;
+            setLigado(ligado);
+        }
+        return false;
     }
 
     public void desligar() {
