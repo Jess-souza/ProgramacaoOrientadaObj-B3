@@ -56,4 +56,14 @@ public class Piloto {
     public void setSexo(Enum sexo) {
         Sexo = sexo;
     }
+
+    @Override
+    public String toString() {
+        return "Piloto{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", equipe='" + equipe + '\'' +
+                ", Sexo=" + Sexo +
+                '}';
+    }
 }

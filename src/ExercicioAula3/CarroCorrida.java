@@ -10,9 +10,9 @@ Classe CarroCorrida
 + "Construtor"
 + set... (alterar atributos da Classe - "Modificadores")
 + get... (retorna valores dos atributos da Classe - "Acessores")
-+ acelerar(float) - aumenta unidades em Km/h
-+ frear(float) - reduz a velocidade em percentual (%) de frenagem
-+ parar()
++ acelerar(float) - aumenta a velocidade em Km/h (Soma em Km/h a velocidade atual)
++ frear(float) - reduz a velocidade em Km/h (subtrai em Km/h a velocidade atual)
++ parar() - velocidade igual a 0 Km/h
 + ligar()
 + desligar()
 *Observações:
@@ -24,7 +24,7 @@ Classe CarroCorrida
 package ExercicioAula3;
 
 public class CarroCorrida {
-    private int numeroCarro;
+    private Integer numeroCarro;
     private Piloto piloto;
     private float velocidadeMaxima;
     private float velocidadeAtual;
@@ -81,13 +81,56 @@ public class CarroCorrida {
         this.ligado = ligado;
     }
 
-/*acelerar(float) - aumenta unidades em Km/h
+    public float acelerar() {
+        //if (ligado = true) {
+        return getVelocidadeAtual() + 30.8f;
+
+        // } else {
+        // System.out.println("Não é possível acelerar um carro desligado!");
+        //}
+        //return 0;
+    }
+
+    public float frear() {
+        //   if (ligado = true) {
+        return getVelocidadeAtual() - 5.32f;
+    }
+
+
+    public boolean parar() {
+        if (ligado = true) {
+            setVelocidadeAtual(0f);
+        }
+        return false;
+    }
+
+    public void ligar() {
+        ligado = true;
+    }
+
+    public void desligar() {
+        if (parar() == true) {
+            ligado = false;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "CarroCorrida{" +
+                "numeroCarro=" + numeroCarro +
+                ", piloto=" + piloto +
+                ", velocidadeMaxima=" + velocidadeMaxima +
+                ", velocidadeAtual=" + velocidadeAtual +
+                ", ligado=" + ligado +
+                '}';
+    }
+
+    /*
 + frear(float) - reduz a velocidade em percentual (%) de frenagem
 + parar()
 + ligar()
 + desligar()
 *Observações:
 *Não ultrapassar a velocidade máxima
-*Frear e Acelerar só funcionam se o carro estiver ligado
 *Desligar só funciona se o carro estiver parado*/
 }
