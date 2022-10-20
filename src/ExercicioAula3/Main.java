@@ -2,8 +2,8 @@ package ExercicioAula3;
 
 public class Main {
     public static void main(String[] args) {
-        Piloto pilotoJessica = new Piloto("Jessica", 24, "Blue", Sexo.Feminino);
-        Piloto pilotoFranklin = new Piloto("Franklin", 30, "Red", Sexo.Masculino);
+        Piloto pilotoJessica = new Piloto("Jessica", 24, "Blue", Sexo.FEMININO);
+        Piloto pilotoFranklin = new Piloto("Franklin", 30, "Red", Sexo.MASCULINO);
 
         System.out.println(pilotoJessica);
         System.out.println(pilotoFranklin);

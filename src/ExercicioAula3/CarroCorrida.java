@@ -73,7 +73,7 @@ public class CarroCorrida {
         this.velocidadeAtual = velocidadeAtual;
     }
 
-    public boolean getLigado(boolean b) {
+    public boolean getLigado() {
         return ligado;
     }
 
@@ -120,12 +120,12 @@ public class CarroCorrida {
         return false;
     }
 
-    public boolean ligar() {
-        if (getLigado(false)) {
-            boolean ligado = true;
-            setLigado(ligado);
+    public void ligar() {
+        if (getLigado() == false) {
+            setLigado(true);
+        } else {
+            System.out.println("O carro já está ligado!");
         }
-        return false;
     }
 
     public void desligar() {
@@ -143,7 +143,6 @@ public class CarroCorrida {
                 ", piloto=" + piloto +
                 ", velocidadeMaxima=" + velocidadeMaxima +
                 ", velocidadeAtual=" + velocidadeAtual +
-                ", ligado=" + ligado +
-                '}';
+                ", ligado=" + ligado + '}';
     }
 }
