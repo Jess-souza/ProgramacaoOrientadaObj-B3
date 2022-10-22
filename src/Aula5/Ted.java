@@ -7,8 +7,18 @@ import java.time.LocalTime;
 public class Ted extends Transferencia {
     private LocalTime horaLimite;
 
-    public Ted(BigDecimal valor, Conta contaDestino, LocalDate dataTransferencia, TipoTransferencia tipoTransferencia, LocalTime horaLimite) {
-        super(valor, contaDestino, contaDestino, dataTransferencia, tipoTransferencia);
-        this.horaLimite = horaLimite;
+    public Ted(
+            BigDecimal valor,
+            Conta contaOrigem,
+            Conta contaDestino,
+            LocalDate dataTransferencia
+    ) {
+        super(valor, contaOrigem, contaDestino, dataTransferencia, TipoTransferencia.TED);
+        this.horaLimite = LocalTime.of(18, 0, 0);
+    }
+
+    @Override
+    public void transferir() {
+        System.out.println("Transferencia Ted realizada!");
     }
 }
