@@ -1,5 +1,4 @@
 /*Criar classe Mamifero
-
         * Atributos
         - quantidade de patas
 
@@ -18,6 +17,12 @@ public class Mamifero extends Animal {
     }
 
     public void amamentar() {
-        System.out.printf("O %s realiza amamentação!\n", getNome());
+        System.out.printf("O %s realiza amamentação!\n\n", getNome());
+    }
+
+    @Override
+
+    public String toString() {
+        return super.toString();
     }
 }

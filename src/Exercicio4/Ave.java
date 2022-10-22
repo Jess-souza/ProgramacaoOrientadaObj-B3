@@ -18,7 +18,7 @@ public class Ave extends Animal {
         this.voa = voa;
     }
 
-    public boolean getVoa() {
+    public boolean isVoa() {
         return voa;
     }
 
@@ -27,6 +27,17 @@ public class Ave extends Animal {
     }
 
     public void voa() {
-        System.out.printf("O %s é uma ave e pode voar!\n", getNome());
+        if (voa == true) {
+            System.out.printf("O %s é uma ave e pode voar!\n", getNome());
+        } else {
+            System.out.printf("Embora seja uma ave, %s não pode voar\n", getNome());
+        }
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", voa=" + voa +
+                '}';
     }
 }

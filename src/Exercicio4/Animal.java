@@ -53,4 +53,15 @@ public class Animal {
     public void setVelocidadeMedia(Double velocidadeMedia) {
         this.velocidadeMedia = velocidadeMedia;
     }
+
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "nome='" + nome + '\'' +
+                ", cor='" + cor + '\'' +
+                ", ambiente=" + ambiente +
+                ", velocidadeMedia=" + velocidadeMedia +
+                '}';
+    }
 }
