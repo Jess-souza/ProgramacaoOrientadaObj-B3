@@ -21,7 +21,7 @@ Classe CarroCorrida
 *Desligar só funciona se o carro estiver parado
 */
 
-package ExercicioAula3;
+package Exercicio3;
 
 public class CarroCorrida {
     private Integer numeroCarro;

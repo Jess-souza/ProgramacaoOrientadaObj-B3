@@ -14,7 +14,7 @@
 
 // Criar mais um objeto que faça sentido pra aplicação
 
-package ExercicioAula1;
+package Exercicio1;
 
 public class Quitanda {
     public static void main(String[] args) {

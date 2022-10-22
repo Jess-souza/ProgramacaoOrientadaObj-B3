@@ -1,4 +1,4 @@
-package ExercicioAula1;
+package Exercicio1;
 
 public class Verdura {
     public String nome;

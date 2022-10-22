@@ -10,7 +10,7 @@
         + get... (retorna valores dos atributos da Classe - "Acessores")
         */
 
-package ExercicioAula3;
+package Exercicio3;
 
 public class Piloto {
     private String nome;

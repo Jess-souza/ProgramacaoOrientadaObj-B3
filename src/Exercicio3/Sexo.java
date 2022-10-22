@@ -1,4 +1,4 @@
-package ExercicioAula3;
+package Exercicio3;
 
 public enum Sexo {
     FEMININO,

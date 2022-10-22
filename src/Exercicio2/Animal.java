@@ -1,4 +1,4 @@
-package ExercicioAula2;
+package Exercicio2;
 
 public class Animal {
     public String especie;
